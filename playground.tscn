@@ -222,3 +222,4 @@ debug_color = Color(0.043137256, 0, 0.78039217, 0.41960785)
 
 [node name="TestDummy" parent="." unique_id=830320175 instance=ExtResource("4_is3ju")]
 position = Vector2(300, 251)
+scale = Vector2(0.8, 0.8)
