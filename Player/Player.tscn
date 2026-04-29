@@ -628,9 +628,7 @@ text = "State"
 horizontal_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=131530449]
-z_index = 3
 process_callback = 0
-position_smoothing_enabled = true
 script = ExtResource("9_3nb2p")
 
 [node name="OneWayPlatformCheck" type="RayCast2D" parent="." unique_id=14811543]

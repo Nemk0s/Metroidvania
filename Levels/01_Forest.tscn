@@ -927,9 +927,8 @@ script = ExtResource("4_dxedu")
 width = 2048
 metadata/_custom_type_script = "uid://fftmxmlqyane"
 
-[node name="LevelTranition" parent="." unique_id=419158838 instance=ExtResource("5_ylmpc")]
+[node name="LevelTransition" parent="." unique_id=419158838 instance=ExtResource("5_ylmpc")]
 position = Vector2(2048, 256)
 size = 20
 location = 3
 target_level = "uid://buxdu80pq28om"
-target_area_name = "LevelTransition"

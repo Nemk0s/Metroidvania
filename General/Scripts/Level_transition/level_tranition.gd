@@ -39,8 +39,10 @@ func _on_new_scene_ready( target_name : String, offset : Vector2 ) -> void:
 	pass
 	
 func _on_load_scene_finished() -> void:
-	area_2d.body_entered.connect( _on_player_entered )
 	area_2d.monitoring = false
+	area_2d.body_entered.connect( _on_player_entered )
+	await get_tree().physics_frame
+	await get_tree().physics_frame
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	area_2d.monitoring = true
@@ -82,6 +84,4 @@ func get_offset( player : Node2D ) -> Vector2:
 			offset.y = -2
 		else:
 			offset.y = 32
-		
-	
-	return Vector2.ZERO
+	return offset

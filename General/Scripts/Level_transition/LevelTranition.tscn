@@ -5,12 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxfl"]
 size = Vector2(32, 32)
 
-[node name="LevelTranition" type="Node2D" unique_id=419158838]
+[node name="LevelTransition" type="Node2D" unique_id=419158838]
 script = ExtResource("1_ua6oj")
-size = null
-target_level = null
-target_area_name = null
-location = null
 
 [node name="Area2D" type="Area2D" parent="." unique_id=987957225]
 collision_layer = 0
