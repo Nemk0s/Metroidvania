@@ -13,9 +13,9 @@ func init() -> void:
 	
 func enter() -> void:
 	#player.add_debug_indicator( Color.GREEN )
+	VisualEffects.jump_dust( player.global_position )
 	player.animation_player.play("Jump")
-	player.velocity.y = -player.jump_velocity
-	
+	player.velocity.y = -player.jump_velocity	
 	if player.previous_state == fall and not Input.is_action_pressed("jump"):
 		await get_tree().physics_frame
 		player.velocity.y *= 0.5

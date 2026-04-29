@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://drw5bipimwdnj"]
 
 [ext_resource type="Script" uid="uid://de6m0uqnmpldr" path="res://Levels/Props/test_dummy.gd" id="1_jqyg0"]
+[ext_resource type="Script" uid="uid://b6hckue3xawiv" path="res://General/visual_effects/hit_particle_settings.gd" id="2_ayqsl"]
 [ext_resource type="Script" uid="uid://dqqepvvj26hg" path="res://General/Scripts/damage_area.gd" id="2_s1jws"]
 [ext_resource type="Texture2D" uid="uid://c8aotqt8gdi6" path="res://Map/Sprites/Autumn Forest/Props/props_destructible.png" id="3_ayqsl"]
+
+[sub_resource type="Resource" id="Resource_fu0dy"]
+script = ExtResource("2_ayqsl")
+count = 50
+color = Color(0.6004413, 0.38262635, 0.17176673, 1)
+metadata/_custom_type_script = "uid://b6hckue3xawiv"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu0dy"]
 size = Vector2(14, 38)
@@ -18,6 +25,7 @@ region = Rect2(16, 52, 16, 11)
 [node name="TestDummy" type="Node2D" unique_id=830320175]
 position = Vector2(0, -5.5)
 script = ExtResource("1_jqyg0")
+particles = Array[ExtResource("2_ayqsl")]([SubResource("Resource_fu0dy")])
 
 [node name="DamageArea" type="Area2D" parent="." unique_id=21622569]
 position = Vector2(0, 0.5)

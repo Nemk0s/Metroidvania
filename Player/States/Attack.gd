@@ -17,7 +17,6 @@ func enter() -> void:
 	do_attack()
 	player.animation_player.animation_finished.connect( _on_animation_finished )
 	pass
-	
 func exit() -> void:
 	timer = 0
 	combo = 0
@@ -53,6 +52,7 @@ func do_attack() -> void:
 		elif combo == 2:
 			anim_name = "Attack_3"
 		player.animation_player.play( anim_name )
+	await get_tree().create_timer(0.1).timeout
 	player.attack_area.activate(0.3)
 	pass
 	

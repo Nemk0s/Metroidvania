@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cfk14ov3qu5km"]
+
+[ext_resource type="Texture2D" uid="uid://b72sauwiyhmq3" path="res://General/Sprites/dust_effects.png" id="1_2mhsi"]
+[ext_resource type="Script" uid="uid://bc7ry8d6eho3x" path="res://General/visual_effects/dust_effect.gd" id="2_47b14"]
+
+[sub_resource type="Animation" id="Animation_xp2hk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_r5l2m"]
+resource_name = "hit"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [16, 23]
+}
+
+[sub_resource type="Animation" id="Animation_yhrns"]
+resource_name = "jump"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 7]
+}
+
+[sub_resource type="Animation" id="Animation_nto8b"]
+resource_name = "land"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4oal"]
+_data = {
+&"RESET": SubResource("Animation_xp2hk"),
+&"hit": SubResource("Animation_r5l2m"),
+&"jump": SubResource("Animation_yhrns"),
+&"land": SubResource("Animation_nto8b")
+}
+
+[node name="DustEffect" type="Sprite2D" unique_id=673773244]
+z_index = 2
+texture = ExtResource("1_2mhsi")
+hframes = 8
+vframes = 3
+script = ExtResource("2_47b14")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=180205183]
+libraries/ = SubResource("AnimationLibrary_g4oal")

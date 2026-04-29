@@ -15,6 +15,16 @@ run/main_scene="uid://b270y60t5afyc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bxe56c8jchxks"
 
+[audio]
+
+buses/default_bus_layout="uid://dn6krk0ee8n5h"
+
+[autoload]
+
+VisualEffects="*uid://cdx6qxepngh0g"
+Audio="*uid://buysh21xdtdk4"
+SceneMenager="*uid://bmk7wev4j5xhe"
+
 [display]
 
 window/size/viewport_width=480
@@ -22,6 +32,10 @@ window/size/viewport_height=270
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+Player=""
 
 [input]
 

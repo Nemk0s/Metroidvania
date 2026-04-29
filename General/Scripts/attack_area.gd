@@ -16,21 +16,19 @@ func _on_body_entered( body : Node2D ) -> void:
 	if body is DamageArea:
 		body.take_damage( self )
 		pass
-	print("HIT")
 
 
 func activate( duration : float = 0.3 ) -> void:
-	set_active()
+	set_active( true )
 	await  get_tree().create_timer( duration ). timeout
 	set_active( false )
-	print("hit")
 	
 	
 	
 func set_active( value : bool = true) -> void:
 	monitoring = value
 	visible = value
-	
+	monitorable = value
 	
 	
 func flip( direction_x : float ) -> void:
